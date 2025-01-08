@@ -191,7 +191,7 @@ parameters."
   (when lsp-progress-function
     (funcall lsp-progress-function workspace params))
 
-  (run-hook-with-args lsp-copilot-progress-handlers workspace params))
+  (run-hook-with-args 'lsp-copilot-progress-handlers workspace params))
 
 (defun lsp-copilot--server-initialized-fn (workspace)
   ;; Patch capabilities -- server may respond with an empty dict. In plist,
